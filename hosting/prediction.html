@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>What if you were in Titaniv..!</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js"></script>
+	</head>
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+		$('.selectpicker').selectpicker();
+		});
+	</script>
+	<body>
+		<div class="container">
+			<h2>What if you were in Titanic...!</h2>
+			<form action="/predict" style="margin-top: 20px;" method="POST">
+				<div class="form-group" style="margin-top: 20px;">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" id="name" placeholder="Enter name" name="name" value="Emily">
+				</div>
+				<div class="form-group" style="margin-top: 20px;">
+					<label for="age">Age:</label>
+					<select class="selectpicker" name="age">
+								<option value="0" disabled selected>Your age</option>
+						<option value="1">0 - 10</option>
+						<option value="2">10 - 20</option>
+						<option value="3">20 - 30</option>
+						<option value="4">30 - 40</option>
+						<option value="5">40 - 50</option>
+						<option value="6">50 - 60</option>
+						<option value="7">>60</option>
+					</select>
+			
+				</div>
+				<div class="form-group" style="margin-top: 20px;">
+					<label for="pclass">Passenger class:</label>
+					<select class="selectpicker" name="pclass">
+								<option value="0" disabled selected>Passenger class</option>
+						<option value="1">First class</option>
+						<option value="2">Second class</option>
+						<option value="3">Third class</option>
+					</select>
+			
+				</div>
+				<div class="form-group" style="margin-top: 20px;">
+					<label for="sib">Number of siblings on Titanic</label>
+					<select class="selectpicker" name="sib">
+								<option value="-1" disabled selected>siblings</option>
+								<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+			
+				</div>
+				<div class="form-group" style="margin-top: 20px;">
+					<label for="emb">Embarked</label>
+					<select class="selectpicker" name="emb">
+								<option value="a" disabled selected>Embarked</option>
+						<option value="C">Cherbourg</option>
+						<option value="Q">Queenstown</option>
+						<option value="S">Southampton</option>
+					</select>
+					
+				</div>
+				<div class="form-group" style="margin-top: 20px;">
+					
+					<div class="checkbox">
+						<label><input type="radio" name="sex" value="male"> Male</label>
+						<label><input type="radio" name="sex" value="female" checked> Female</label>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-default" style="margin-top: 20px;">Submit</button>
+			</form>
+			</div>
+	</body>
+</html>
